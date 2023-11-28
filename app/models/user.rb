@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :presidents
   has_many :bookings
-  validates :name, :email, presence: true
+  validates :first_name, :last_name, :email, presence: true
 end
