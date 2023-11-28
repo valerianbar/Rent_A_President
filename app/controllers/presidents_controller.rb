@@ -4,5 +4,6 @@ class PresidentsController < ApplicationController
   end
 
   def show
+    @president = President.find(params[:id])
   end
 end
