@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+President.destroy_all
+puts "start seeding"
+
+10.times do
+  President.create(
+    name: Faker::FunnyName.name,
+    description: "Description of President"
+  )
+end
+puts "end seeding"
