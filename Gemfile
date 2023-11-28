@@ -79,4 +79,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'faker', '~> 3.2'
+gem "cloudinary"
