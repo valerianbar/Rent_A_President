@@ -1,2 +1,8 @@
 <h1>Presidents#show</h1>
 <p>Find me in app/views/presidents/show.html.erb</p>
+
+<h2><%= @president.name %></h2>
+<p><%= @president.description %></p>
+
+
+<%= link_to "Back to the presidents index", presidents_path %>
