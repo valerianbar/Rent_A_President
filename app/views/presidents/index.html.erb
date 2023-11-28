@@ -1,6 +1,7 @@
 <h1>Presidents#index</h1>
 <div>
-<ul> <% President.each do |president|%>
-  <li><%= Link_to president.name, president_path(president[:id]) %></li>
+<ul> <% @presidents.each do |president|%>
+  <li><%= link_to president.name, presidents_path(president) %></li>
   <li><%= president.description %></li>
+  <% end  %>
 </ul></div>
