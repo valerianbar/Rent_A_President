@@ -1,2 +1,7 @@
 <h1>Presidents#index</h1>
-<p>Find me in app/views/presidents/index.html.erb</p>
+<div>
+<ul> <% @presidents.each do |president|%>
+  <li><%= link_to president.name, presidents_path(president) %></li>
+  <li><%= president.description %></li>
+  <% end  %>
+</ul></div>
