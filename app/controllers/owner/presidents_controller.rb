@@ -13,8 +13,8 @@ class Owner::PresidentsController < ApplicationController
     end
   end
   private
-  
+
   def president_params
-    params.require(:president).permit(:name, :description)
+    params.require(:president).permit(:name, :description, photos: [])
   end
 end
