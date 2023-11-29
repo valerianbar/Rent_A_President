@@ -1,10 +1,10 @@
-<div class="text-center mx-auto mt-2 mb-3"><h1>Presidents to rent</h1></div>
+<div class="mx-auto mt-2 mb-3"><h1 class="text-center">Presidents to rent</h1></div>
   <div class="row">
     <% @presidents.each do |president| %>
       <div class="col-lg-3 col-md-4 col-sm-12 mb-5"> <!-- 5 cartes par ligne sur grands écrans, 3 sur tablettes, 1 sur mobiles -->
         <div class="card-trip">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-          <div class="card-trip-infos">
+              <div class="card-trip-infos">
             <div>
               <%= link_to president.name, president_path(president) %>
               <p><%= president.description %></p>

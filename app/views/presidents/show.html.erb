@@ -1,12 +1,8 @@
 <h2><%= @president.name %></h2>
 
+<div class="col-lg-3 col-md-4 col-sm-12 mb-5 p-5">
 <p><%= @president.description %></p>
-
-
-
-
 <% @president.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
-
+<%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <%= link_to "Back to the presidents index", presidents_path %>
+<% end %>
