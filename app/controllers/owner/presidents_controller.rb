@@ -7,7 +7,7 @@ class Owner::PresidentsController < ApplicationController
     @president = President.new(president_params)
     @president.user = current_user
     if @president.save
-      redirect_to owner_president_path(@president)
+      redirect_to presidents_path
     else
       render :new, status: :unprocessable_entity
     end
