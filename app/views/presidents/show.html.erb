@@ -4,8 +4,17 @@
 <p><%= @president.description %></p>
 <% @president.photos.each do |photo| %>
 <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<%= link_to "Back to the presidents index", presidents_path %>
 <% end %>
+<%# <%= simple_form_for(restaurant) do |f| %>
+  <%# <%= f.input :name %>
+  <%# <%= f.input :address %> %>
+  <%# <%= f.input :rating %> %>
+  <%# <%= f.submit %> %>
+<%# <% end %> %> %> %>
+<%# <%= f.input :opening_date,
+            as: :string,
+            <%# input_html: { data: { controller: "datepicker" } } %>
+<%= link_to "Back to the presidents index", president_path %>
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
