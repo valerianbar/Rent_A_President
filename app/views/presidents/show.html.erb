@@ -5,6 +5,4 @@
 <% @president.photos.each do |photo| %>
 <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <%= link_to "Back to the presidents index", presidents_path %>
-
 <% end %>
-</div>
