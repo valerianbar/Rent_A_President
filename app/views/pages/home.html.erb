@@ -1,4 +1,9 @@
 <!-- Hero Section -->
+
+<%macron = President.find_by name: "Emmanuel Macron"%>
+<%hollande = President.find_by name: "François Hollande"%>
+<%poutine = President.find_by name: "Vladimir Poutine"%>
+
 <div class="banner">
   <div class="container">
     <h1>Welcome to Rent a President</h1>
@@ -17,7 +22,7 @@
     <img src="https://i.ibb.co/wzJ0F60/macron-coach-of-nothing.webp" class="img-full" />
     <div class="card-trip-infos">
       <div>
-        <%= link_to "Macron", president_path(1) %>
+        <%= link_to "Macron", president_path(macron) %>
         <p><%= "Coaching for Youtubers" %></p>
       </div>
       <h2 class="card-trip-pricing">$10.00 per day</h2>
@@ -31,7 +36,7 @@
     <img src="https://i.ibb.co/HC3hK0x/hollande-gardening.jpg" class="img-full" />
     <div class="card-trip-infos">
       <div>
-        <%= link_to "Hollande", president_path(2) %>
+        <%= link_to "Hollande", president_path(hollande) %>
         <p><%= "Gardening Specialist" %></p>
       </div>
       <h2 class="card-trip-pricing">$12.00 per day</h2>
@@ -45,7 +50,7 @@
     <img src="https://i.ibb.co/bQzxMQj/poutine-fishing.jpg" class="img-full" />
     <div class="card-trip-infos">
       <div>
-        <%= link_to "Poutine", president_path(3) %>
+        <%= link_to "Poutine", president_path(poutine) %>
         <p><%= "Fishing Teacher" %></p>
       </div>
       <h2 class="card-trip-pricing">$15.00 per day</h2>
