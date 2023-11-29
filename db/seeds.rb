@@ -106,4 +106,3 @@ president10 = President.new(
 file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701189032/43258920_spouiu.jpg")
 president10.photos.attach([{io: file, filename: "nes.jpg", content_type: "image/jpg"}])
 president10.save!
-
