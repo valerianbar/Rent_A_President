@@ -27,3 +27,12 @@ user = User.create!(
   president.save!
 end
 puts "end seeding"
+
+# president8 = President.new(
+#   name: "Kim Jong",
+#   description: "Kimmy is an experienced tennis teacher. Roger, stay away from him ! Or he'll send a massive bomb at your Head.",
+#   user: user
+# )
+# file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701252942/kim-jong-tennisman_rb0wnj.jpg")
+# president8.photos.attach([{io: file, filename: "nes.jpg", content_type: "image/jpg"}])
+# president8.save!
