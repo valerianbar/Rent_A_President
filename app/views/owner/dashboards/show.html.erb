@@ -1,1 +1,14 @@
 <div class="text-center mx-auto mt-2 mb-3"><h1>My Dashboard</h1></div>
+<div>
+  <div><ul>
+    <% @my_presidents.each do |my_president| %>
+    <li><% my_president.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+        <% end  %>
+        <%= my_president.name %>
+        <%= my_president.description %>
+    </li>
+        <% end %>
+    </ul>
+  </div>
+</div>

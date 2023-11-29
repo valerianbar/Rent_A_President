@@ -1,15 +1,17 @@
 <div class="mx-auto mt-2 mb-3"><h1 class="text-center">Presidents to rent</h1></div>
   <div class="row">
     <% @presidents.each do |president| %>
-      <div class="col-lg-3 col-md-4 col-sm-12 mb-5"> <!-- 5 cartes par ligne sur grands écrans, 3 sur tablettes, 1 sur mobiles -->
+      <div class="col-lg-3 col-md-4 col-sm-12 mb-5"> <!-- 4 cartes par ligne sur grands écrans, 3 sur tablettes, 1 sur mobiles -->
         <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <% president.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+        <% end  %>
               <div class="card-trip-infos">
             <div>
               <%= link_to president.name, president_path(president) %>
               <p><%= president.description %></p>
             </div>
-            <h2 class="card-trip-pricing">$10.00 per day</h2>
+            <h2 class="card-trip-pricing">$10 per day</h2>
           </div>
         </div>
       </div>
