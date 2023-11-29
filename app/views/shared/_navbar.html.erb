@@ -1,0 +1,39 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon px-2">
+  <div class="container-fluid">
+  <%= link_to root_path do %>
+    <%= image_tag "rent-a-president-logo.png", alt: "logo rent-a-president", class: "logo" %>
+  <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Discover", presidents_path, class: "nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Propose", new_owner_president_path, class: "nav-link"%>
+          </li>
+            <li class="nav-item active">
+        <%= link_to "Dashboard", owner_dashboards_path, class: "nav-link" %>
+      </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "My account", "#", class: "dropdown-item" %>
+              <%= link_to "Notifications", "#", class: "dropdown-item" %>
+              <%= link_to "Sign out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

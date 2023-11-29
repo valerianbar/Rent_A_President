@@ -1,0 +1,30 @@
+.banner {
+  background-size: cover;
+  background-position: top;
+  padding: 220px 0;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('rent-a-president-banner.png');
+
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  font-size: 48px;
+  text-shadow: 3px 2px 4px #787878;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .8;
+  text-shadow: 0px 0px 20px #787878;
+}
+
+.bg-gradient-primary-to-secondary {
+  background: linear-gradient(346deg, #2e0a0a, #003576eb);
+}
+
+body {
+  overflow-x: hidden;
+}
