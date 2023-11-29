@@ -19,6 +19,6 @@ class PresidentsController < ApplicationController
       {
         lat: @president.latitude,
         lng: @president.longitude
-
-    end
+    }]
   end
+end
