@@ -4,14 +4,13 @@ class PresidentsController < ApplicationController
   end
 
   def show
-    @presidents = President.all
     @president = President.find(params[:id])
-    # # The `geocoded` scope filters only flats with coordinates
-    # @markers = @president.geocoded.map do |adress|
+    # The `geocoded` scope filters only flats with coordinates
+    # @markers = @president.geocode.map do |adress|
     #   {
     #     lat: adress.latitude,
     #     lng: adress.longitude
     #   }
-    # end
+    end
   end
-end
+# end
