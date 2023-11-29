@@ -1,10 +1,9 @@
-<h1>Owner::Presidents#new</h1>
-<p>Find me in app/views/owner/presidents/new.html.erb</p>
+<div class="text-center mx-auto mt-2 mb-3"><h1>Add your president</h1></div>
 <div>
 <%= simple_form_for [:owner, @president] do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.button :submit %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.button :submit %>
 <% end %>
 </div>
