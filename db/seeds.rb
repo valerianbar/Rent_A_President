@@ -25,7 +25,7 @@ president.save!
 
 president = President.new(
   name: "Emmanuel Macron",
-  description: "Emmanuel is a digital coach, he'll help you turn on off your computer, load your phone and so",
+  description: "Emmanuel is a digital coach, he'll help you turn on off your computer, load your phone and so.",
   user: user,
   address: "Paris"
 )
@@ -58,7 +58,7 @@ president4.save!
 
 president5 = President.new(
   name: "Barack Obama",
-  description: "Barack'll cut your hair in a delightful manner. I recommended him to your mother-in-law and it made her move overseas. Goal achieved",
+  description: "Barack'll cut your hair in a delightful manner. I recommended him to your mother-in-law and it made her move overseas. Goal achieved.",
   user: user,
   address: "Washington"
 )
@@ -99,7 +99,7 @@ president8.save!
 
 president9 = President.new(
   name: "Bill Clinton",
-  description: "Billy will cater your private or office events",
+  description: "Billy is a good cook, he organizes your private or professional events with love.",
   user: user,
   address: "Washington"
 )
@@ -109,7 +109,7 @@ president9.save!
 
 president10 = President.new(
   name: "Donald Trump",
-  description: "Donnie'll sweep your house. Also handy if you hand up in jail. He'll come and visit you on top of cleaning",
+  description: "Donnie'll sweep your house. Also handy if you hand up in jail. He'll come and visit you on top of cleaning.",
   user: user,
   address: "Washington"
 )

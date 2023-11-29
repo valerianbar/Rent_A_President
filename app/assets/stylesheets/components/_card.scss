@@ -1,7 +1,7 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-trip > img {
@@ -17,6 +17,7 @@
     object-fit: fill;
   }
 }
+
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;
@@ -29,13 +30,13 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  height: 110px; /* Ajout d'une hauteur fixe au description cards*/
 }
 
 .card-trip-infos .card-trip-user {
