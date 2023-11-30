@@ -37,7 +37,7 @@ president0.save!
 
 president = President.new(
   name: "Emmanuel Macron",
-  description: "Emmanuel is a digital coach, he'll help you turn on off your computer, load your phone and so.",
+  description: "Emmanuel is a digital coach for youtubers ans influencers. He'll help you with your online carrier with the help of his contacts in the industry.",
   user: user,
   address: "Paris"
 )
@@ -48,7 +48,7 @@ president.save!
 
 president3 = President.new(
   name: "Vladimir Poutine",
-  description: "Vlad'll show you how to catch big fishs. Highly recommended to navigate around tumultous seas.",
+  description: "Vlad'll show you how to catch big fishs. Highly recommended to navigate around tumultous seas. He's also a good hunter and will help you to get rid of your enemies.",
   user: user,
   address: "Moscow"
 )
@@ -57,20 +57,9 @@ president3.photos.attach([{io: file, filename: "nes.jpg", content_type: "image/j
 president3.save!
 
 
-president4 = President.new(
-  name: "Jacques Chirac",
-  description: "Jacques'll teach you how to drink a hundred beers in a row and still stand up. Useful for boring weddings.",
-  user: user,
-  address: "Paris"
-)
-file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701252942/chirac_p9xl9c.jpg")
-president4.photos.attach([{io: file, filename: "nes.jpg", content_type: "image/jpg"}])
-president4.save!
-
-
 president5 = President.new(
   name: "Barack Obama",
-  description: "Barack'll cut your hair in a delightful manner. I recommended him to your mother-in-law and it made her move overseas. Goal achieved.",
+  description: "Barack'll cut your hair in a delightful manner. I recommended him to your mother-in-law and it made her move overseas. Goal achieved !",
   user: user,
   address: "Washington"
 )
@@ -81,7 +70,7 @@ president5.save!
 
 president6 = President.new(
   name: "Marine Le Pen",
-  description: "Marine hates some people but she loves all the animals. She'll take care of your dog, cat, hamster, whatever.",
+  description: "Marine hates some people but she take care of your animals. She'll take care of your dog, cat, hamster, whatever with love.",
   user: user,
   address: "Paris"
 )
@@ -101,7 +90,7 @@ president7.save!
 
 president8 = President.new(
   name: "Kim Jong",
-  description: "Kimmy is an experienced tennis teacher. Roger, stay away from him ! Or he'll send a massive bomb at your Head.",
+  description: "Kimmy is an experienced tennis teacher. Roger, stay away from him ! Or he'll send a massive bomb at your head.",
   user: user,
   address: "Pyongyang"
 )
@@ -111,7 +100,7 @@ president8.save!
 
 president9 = President.new(
   name: "Bill Clinton",
-  description: "Billy is a good cook, he organizes your private or professional events with love.",
+  description: "Billy is a good cook, he organizes your private events. He loves to cook vegetables and burgers.",
   user: user,
   address: "Washington"
 )
