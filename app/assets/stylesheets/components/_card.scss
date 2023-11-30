@@ -1,7 +1,18 @@
+/* CSS pour les cartes */
+.card-trip-home {
+  margin: 0 30px; /* Ajout de marge 30 à droite et à gauche pour la page d'accueil */
+  font-size: 18px;
+}
+
+.card-trip-list {
+  margin: 0 5px; /* Ajout de marge 5 à droite et à gauche pour la liste */
+  font-size: 13px;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-trip > img {
@@ -10,8 +21,8 @@
   object-fit: fill;
 }
 
-@media screen and (min-width: 1650px) {
-  .card-trip > img {
+@media screen and (min-width: 1800px) {
+  .card-trip-home > img {
     height: 350px;
     width: 100%;
     object-fit: fill;
@@ -19,13 +30,12 @@
 }
 
 .card-trip h2 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-trip p {
-  font-size: 12px;
   opacity: .7;
   margin: 0;
 }
@@ -36,7 +46,7 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  height: 110px; /* Ajout d'une hauteur fixe au description cards*/
+  height: 100px; /* Ajout d'une hauteur fixe pour les cartes de description */
 }
 
 .card-trip-infos .card-trip-user {
@@ -44,4 +54,13 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.custom-link {
+  color: #181818;
+  text-decoration: none; /* Retrait du soulignement des liens */
+}
+
+a {
+  text-decoration: none;  /* Retrait du soulignement des liens */
 }

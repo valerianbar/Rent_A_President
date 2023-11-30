@@ -17,45 +17,51 @@
 <div class="row">
 
 <!-- Card Macron -->
-<div class="col-lg-4 col-md-4 col-sm-12 mb-5">
-  <div class="card-trip">
-    <img src="https://i.ibb.co/wzJ0F60/macron-coach-of-nothing.webp" class="img-full" />
-    <div class="card-trip-infos">
-      <div>
-        <%= link_to "Macron", president_path(macron) %>
-        <p><%= "Coaching for Youtubers" %></p>
+<div class="col-lg-4 col-md-12 col-sm-12 mb-5">
+  <a href="<%= president_path(macron) %>">
+    <div class="card-trip card-trip-home custom-link">
+      <img src="https://i.ibb.co/wzJ0F60/macron-coach-of-nothing.webp" class="img-full" />
+      <div class="card-trip-infos">
+        <div>
+          <p><%= "Macron" %></p>
+          <p><%= "Coaching for Youtubers" %></p>
+        </div>
+        <h2 class="card-trip-pricing">$10 per day</h2>
       </div>
-      <h2 class="card-trip-pricing">$10 per day</h2>
     </div>
-  </div>
+  </a>
 </div>
 
 <!-- Card Hollande -->
-<div class="col-lg-4 col-md-4 col-sm-12 mb-5">
-  <div class="card-trip">
-    <img src="https://i.ibb.co/HC3hK0x/hollande-gardening.jpg" class="img-full" />
-    <div class="card-trip-infos">
-      <div>
-        <%= link_to "Hollande", president_path(hollande) %>
-        <p><%= "Gardening Specialist" %></p>
+<div class="col-lg-4 col-md-12 col-sm-12 mb-5">
+  <a href="<%= president_path(hollande) %>">
+    <div class="card-trip card-trip-home custom-link">
+      <img src="https://i.ibb.co/HC3hK0x/hollande-gardening.jpg" class="img-full" />
+      <div class="card-trip-infos">
+        <div>
+          <p><%= "Hollande" %></p>
+          <p><%= "Gardening Specialist" %></p>
+        </div>
+        <h2 class="card-trip-pricing">$10 per day</h2>
       </div>
-      <h2 class="card-trip-pricing">$10 per day</h2>
     </div>
-  </div>
+  </a>
 </div>
 
 <!-- Card Poutine -->
-<div class="col-lg-4 col-md-4 col-sm-12 mb-5 mr-5">
-  <div class="card-trip">
-    <img src="https://i.ibb.co/bQzxMQj/poutine-fishing.jpg" class="img-full" />
-    <div class="card-trip-infos">
-      <div>
-        <%= link_to "Poutine", president_path(poutine) %>
-        <p><%= "Fishing Teacher" %></p>
+<div class="col-lg-4 col-md-12 col-sm-12 mb-5 mr-5">
+  <a href="<%= president_path(poutine) %>">
+    <div class="card-trip card-trip-home custom-link">
+      <img src="https://i.ibb.co/bQzxMQj/poutine-fishing.jpg" class="img-full" />
+      <div class="card-trip-infos">
+        <div>
+          <p><%= "Poutine" %></p>
+          <p><%= "Fishing Teacher" %></p>
+        </div>
+        <h2 class="card-trip-pricing">$10 per day</h2>
       </div>
-      <h2 class="card-trip-pricing">$10 per day</h2>
     </div>
-  </div>
+  </a>
 </div>
 
 <!-- Testimonial Section -->
