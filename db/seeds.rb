@@ -12,6 +12,12 @@ user = User.create!(
   password: "test123456"
 )
 
+# booking = Booking.new
+
+
+
+
+
 president = President.new(
   name: "François Hollande",
   description: "François'll make your garden glow with new flowers. Always more flowers, always younger.",

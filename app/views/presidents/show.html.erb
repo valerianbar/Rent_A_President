@@ -10,10 +10,20 @@
 
       <!-- Calendrier HTML5 -->
       <h4>Disponibility :</h4>
-      <input type="date" id="booking-date">
+<%# faire un formulaire pour le booking avec simple form @booking qui pointera vers create booking controller %>
 
-      <!-- Bouton "Book This President" -->
-      <button class="btn btn-primary " id="book-button">Book this president</button> <%= link_to "Back to the list", presidents_path, class: "btn btn-secondary" %>
+      <%= simple_form_for(@booking) do |f| %>
+      <%= f.input :start_date,
+            label: "Booking dates",
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+      <%= f.submit "Book this president", class:"btn btn-primary ", id:"book-button" %>
+      <%= link_to "Back to the list", presidents_path, class: "btn btn-secondary" %>
+      <% end %>
+
+    <!-- Bouton "Book This President" -->
+    <%# <button class="btn btn-primary " id="book-button">Book this president</button> %>
+
     </div>
 
 <div class="col-md-6">
