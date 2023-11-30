@@ -1,32 +1,38 @@
 require "open-uri"
 
+
+Booking.destroy_all
 President.destroy_all
 User.destroy_all
 
 puts "start seeding"
 
-user = User.create!(
+user = User.new(
   first_name: "Test1",
   last_name: "test1",
   email: "test@test.com",
   password: "test123456"
 )
+user.save!
 
-# booking = Booking.new
+user2 = User.new(
+  first_name: "Test2",
+  last_name: "test2",
+  email: "test2@test.com",
+  password: "test1234567"
+)
+user2.save!
 
 
-
-
-
-president = President.new(
+president0 = President.new(
   name: "François Hollande",
   description: "François'll make your garden glow with new flowers. Always more flowers, always younger.",
   user: user,
   address: "Paris"
 )
 file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701252942/hollande_vyijxq.jpg")
-president.photos.attach([{io: file, filename: "hollande.jpg", content_type: "image/jpg"}])
-president.save!
+president0.photos.attach([{io: file, filename: "hollande.jpg", content_type: "image/jpg"}])
+president0.save!
 
 
 president = President.new(
@@ -111,3 +117,32 @@ president10 = President.new(
 file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701189032/43258920_spouiu.jpg")
 president10.photos.attach([{io: file, filename: "nes.jpg", content_type: "image/jpg"}])
 president10.save!
+
+
+booking = Booking.new(
+  president: president0,
+  user: user2,
+  start_date: "Thu, 30 Nov 2023",
+  end_date: "Tue, 12 Dec 2023",
+  status: "accepted"
+)
+booking.save!
+
+booking2 = Booking.new(
+  president: president7,
+  user: user2,
+  start_date: "Thu, 30 Nov 2023",
+  end_date: "Tue, 12 Dec 2023",
+  status: "pending"
+)
+booking2.save!
+
+
+booking3 = Booking.new(
+  president: president5,
+  user: user2,
+  start_date: "Thu, 30 Nov 2023",
+  end_date: "Tue, 12 Dec 2023",
+  status: "declined"
+)
+booking3.save!
