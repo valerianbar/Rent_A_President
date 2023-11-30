@@ -8,15 +8,17 @@
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
 
-    <!-- cards -->
-    <div class="col-lg-9 col-md-8 col-12">
+<div class="container-fluid">
+  <div class="row">
+    <!-- Cartes à gauche -->
+    <div class="col-lg-8 col-md-8 col-12">
       <div class="mx-auto mt-2 mb-3">
         <h1 class="text-center">Presidents to rent</h1>
       </div>
       <div class="container">
         <div class="row">
           <% @presidents.each do |president| %>
-            <div class="col-lg-4 col-md-6 col-12 mb-5"> <!-- 3 cartes par ligne sur grands écrans, 2 sur tablettes, 1 sur mobiles -->
+            <div class="col-lg-3 col-md-4 col-12 mb-5"> <!-- Réduisez la largeur des cartes ici -->
               <a href="<%= president_path(president) %>">
                 <div class="card-trip card-trip-list custom-link">
                   <% president.photos.each do |photo| %>
@@ -37,8 +39,8 @@
       </div>
     </div>
 
-    <!-- Carte à droite (sticky) -->
-    <div class="col-lg-3 col-md-4 d-none d-md-block">
+    <!-- Carte à droite (sticky) avec une largeur ajustée -->
+    <div class="col-lg-4 col-md-4 d-none d-md-block">
       <div style="position: sticky; top: 20px; height: 100vh;"> <!-- Réglage de la hauteur à 100% de la hauteur de la fenêtre -->
         <!-- Pour les tablettes et les écrans plus grands, afficher la carte à droite -->
         <div style="width: 100%; height: 100%;"

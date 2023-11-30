@@ -1,15 +1,16 @@
-<div class="text-center mx-auto mt-2 mb-3"><h1>Add your president</h1></div>
+<div class="text-center mx-auto mt-2 mb-3">
+    <h1>Add your president</h1>
+</div>
 <div class="container col-4 m-6">
-<%= simple_form_for [:owner, @president] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :address,
-  input_html: {data: {address_autocomplete_target: "address"},class: "d-none"},
-  wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}%>
-  <%# <%= f.input :address, input_html: {data: {"..."}, class: "d-none"} %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <div class="container btn btn-secondary btn-lg btn-block">
-  <%= f.button :submit %>
-  </div>
-<% end %>
+    <%= simple_form_for [:owner, @president] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :address,
+        input_html: {data: {address_autocomplete_target: "address"},class: "d-none"},
+        wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}%>
+        <%# <%= f.input :address, input_html: {data: {"..."}, class: "d-none"} %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.button :submit, class: 'container btn btn-secondary btn-lg btn-block text-white' %>
+        </div>
+    <% end %>
 </div>
