@@ -102,7 +102,7 @@ president7.save!
 president8 = President.new(
   name: "Kim Jong",
   description: "Kimmy is an experienced tennis teacher. Roger, stay away from him ! Or he'll send a massive bomb at your Head.",
-  user: user,
+  user: user2,
   address: "Pyongyang"
 )
 file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701252942/kim-jong-tennisman_rb0wnj.jpg")
@@ -112,7 +112,7 @@ president8.save!
 president9 = President.new(
   name: "Bill Clinton",
   description: "Billy is a good cook, he organizes your private or professional events with love.",
-  user: user,
+  user: user2,
   address: "Washington"
 )
 file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701252942/Bill-clinton-chief_dkvdsg.jpg")
@@ -122,7 +122,7 @@ president9.save!
 president10 = President.new(
   name: "Donald Trump",
   description: "Donnie'll sweep your house. Also handy if you hand up in jail. He'll come and visit you on top of cleaning.",
-  user: user,
+  user: user2,
   address: "Washington"
 )
 file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701189032/43258920_spouiu.jpg")
@@ -132,7 +132,7 @@ president10.save!
 
 booking = Booking.new(
   president: president0,
-  user: user2,
+  user: user,
   start_date: "Thu, 30 Nov 2023",
   end_date: "Tue, 12 Dec 2023",
   status: "accepted"
