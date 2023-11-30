@@ -1,3 +1,5 @@
+
+
 class PresidentsController < ApplicationController
   def index
     @presidents = President.all
@@ -5,7 +7,9 @@ class PresidentsController < ApplicationController
     @markers = @presidents.geocoded.map do |adress|
       {
         lat: adress.latitude,
-        lng: adress.longitude
+        lng: adress.longitude,
+        info_window_html: render_to_string(partial: "presidents/info_window", locals: { president: adress }),
+        marker_html: render_to_string(partial: "presidents/marker")
       }
     end
   end
@@ -18,7 +22,9 @@ class PresidentsController < ApplicationController
     @marker =[
       {
         lat: @president.latitude,
-        lng: @president.longitude
+        lng: @president.longitude,
+        info_window_html: render_to_string(partial: "presidents/info_window", locals: { president: @president }),
+        marker_html: render_to_string(partial: "presidents/marker")
     }]
   end
 end
