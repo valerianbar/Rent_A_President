@@ -6,43 +6,35 @@ body {
   min-height: 100vh;
 }
 
-.content {
-  flex-grow: 1; /* Cette propriété permet au contenu de s'étendre */
-  /* Autres styles pour le contenu */
-}
-
-
 /* Styles pour le footer */
 .footer {
   background: #e7e7e7;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 140px;
+  height: 120px;
   padding: 0px 50px;
   color: rgba(0, 0, 0, 0.384);
-  position: relative;
-  width: 100%;
+  margin-top: auto; /* footer s'aligne automatiquement en bas*/
 }
+
 .footer-links {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
   color: black;
-  opacity: 0.25;
+  opacity: 0.30;
   text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
+  font-size: 16px;
+  padding: 0px 5px;
 }
+
 .footer-links a:hover {
   opacity: 1;
 }
+
 .footer .fa-heart {
   color: #e72424;
-}
-
-/* Ajout d'un style pour le cas où le contenu est court */
-html {
-  height: 100%;
 }

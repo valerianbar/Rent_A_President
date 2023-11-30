@@ -10,37 +10,38 @@
 
       <!-- Calendrier HTML5 -->
       <h4>Disponibility :</h4>
-<%# faire un formulaire pour le booking avec simple form @booking qui pointera vers create booking controller %>
+      <%# faire un formulaire pour le booking avec simple form @booking qui pointera vers create booking controller %>
 
       <%= simple_form_for(@booking) do |f| %>
       <%= f.input :start_date,
             label: "Booking dates",
             as: :string,
             input_html: { data: { controller: "datepicker" } } %>
-      <%= f.input :president_id, as: :hidden, input_html: { value: @president.id } %>
-      <%= f.submit "Book this president", class:"btn btn-primary ", id:"book-button" %>
+      <%= f.submit "Book this president", class: "btn btn-primary", id: "book-button" %>
       <%= link_to "Back to the list", presidents_path, class: "btn btn-secondary" %>
       <% end %>
-
-    <!-- Bouton "Book This President" -->
-    <%# <button class="btn btn-primary " id="book-button">Book this president</button> %>
-
     </div>
 
-<div class="col-md-6">
-  <div class="border rounded p-2 shadow">
-    <!-- Affichage des photos du président -->
-    <% @president.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, class: "img-fluid", alt: "President Photo" %>
-    <% end %>
+    <div class="col-md-6">
+      <div class="border rounded p-2 shadow">
+        <!-- Affichage des photos du président -->
+        <% @president.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, class: "img-fluid", alt: "President Photo" %>
+        <% end %>
+      </div>
+    </div>
   </div>
+  <!-- Fermeture du premier container -->
 </div>
 
 <!-- Carte avec Mapbox -->
 <div class="container mt-4">
-      <h4>Localisation :</h4>
-    <div style="width: 100%; height: 400px;"
+
+  <h4>Localisation :</h4>
+  <div style="width: 100%; height: 400px;"
     data-controller="map"
     data-map-markers-value="<%= @marker.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    </div>
+</div>
+<!-- Fermeture du deuxième container -->
+</div>

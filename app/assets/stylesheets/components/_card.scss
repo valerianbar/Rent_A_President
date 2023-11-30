@@ -64,3 +64,10 @@
 a {
   text-decoration: none;  /* Retrait du soulignement des liens */
 }
+
+@media screen and (max-width: 1000px) { /* Colonnes centré sur mobile */
+  .col-lg-4, .col-md-12, .col-sm-12 {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
