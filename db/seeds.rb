@@ -21,7 +21,7 @@ maelie = User.new(
   email: "maelie@maelie.com",
   password: "Maelie"
 )
-user2.save!
+maelie.save!
 
 
 florent = User.new(
@@ -30,7 +30,7 @@ florent = User.new(
   email: "florent@florent.com",
   password: "Florent"
 )
-user2.save!
+florent.save!
 
 
 florine = User.new(
@@ -39,7 +39,7 @@ florine = User.new(
   email: "florine@florine.com",
   password: "Florine"
 )
-user2.save!
+florine.save!
 
 
 president0 = President.new(
