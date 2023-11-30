@@ -1,14 +1,42 @@
 <div class="text-center mx-auto mt-2 mb-3"><h1>My Dashboard</h1></div>
-<div>
-  <div><ul>
-    <% @my_presidents.each do |my_president| %>
-    <li><% my_president.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-        <% end  %>
-        <%= my_president.name %>
-        <%= my_president.description %>
-    </li>
-        <% end %>
+<div class= "d-flex row row-cols-1 row-cols-md-3 g-4">
+  <div class= "">
+  <ul>
+    <h2 class= "dashtitle">My Presidents</h2>
+      <% @my_presidents.each do |my_president| %>
+      <li><div class= "col card card-body"><% my_president.photos.each do |photo| %>
+          <img class="card-img-top" <%= cl_image_tag photo.key, height: 50, width: 50, crop: :fill %>>
+          <% end  %>
+          <h4 class= "card-title"><%= my_president.name %></h4>
+          <p class="card-text"><%= my_president.description %> </p>
+          <% end %>
+          </div>
+      </li>
+    </ul>
+  </div >
+
+  <div class= "dashcard">
+    <h2>My Bookings</h2>
+      <ul>
+        <li><% @my_bookings.each do |my_booking| %>
+          <%= my_booking.start_date %> to <%= my_booking.end_date %>
+            <%= my_booking.president.name %>
+            <% end %>
+        </li>
+      </ul>
+    </div>
+
+  <div class= "dashtitle">
+  <h2>My Presidents's bookings</h2>
+    <ul>
+      <li>
+        <% @bookings_of_my_presidents.each do |bookings_of_my_president| %>
+          <%= bookings_of_my_president.start_date %> to <%= bookings_of_my_president.end_date %>
+          <%= bookings_of_my_president.user.first_name %>
+          <%= bookings_of_my_president.user.last_name %>
+          <%= bookings_of_my_president.user.email %>
+          <% end %>
+        </li>
     </ul>
   </div>
 </div>
