@@ -20,5 +20,7 @@ class PresidentsController < ApplicationController
         lat: @president.latitude,
         lng: @president.longitude
     }]
+
+    @booking = Booking.new
   end
 end
