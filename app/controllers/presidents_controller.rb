@@ -27,7 +27,7 @@ class PresidentsController < ApplicationController
         info_window_html: render_to_string(partial: "presidents/info_window", locals: { president: @president }),
         marker_html: render_to_string(partial: "presidents/marker")
     }]
-
+    @review = Review.new
     @booking = Booking.new
   end
 end

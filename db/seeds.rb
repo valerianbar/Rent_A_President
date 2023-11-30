@@ -164,3 +164,12 @@ booking3 = Booking.new(
   status: "declined"
 )
 booking3.save!
+
+
+review = Review.new(
+  president: president5,
+  rating: 2,
+  comment: "il est super",
+  user: maelie
+)
+review.save!
