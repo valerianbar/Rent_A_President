@@ -17,6 +17,7 @@
             label: "Booking dates",
             as: :string,
             input_html: { data: { controller: "datepicker" } } %>
+      <%= f.input :president_id, as: :hidden, input_html: { value: @president.id } %>
       <%= f.submit "Book this president", class:"btn btn-primary ", id:"book-button" %>
       <%= link_to "Back to the list", presidents_path, class: "btn btn-secondary" %>
       <% end %>
