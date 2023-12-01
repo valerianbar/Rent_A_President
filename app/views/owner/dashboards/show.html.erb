@@ -5,9 +5,10 @@
       <h2>My Bookings</h2>
       <ul>
         <li><% @my_bookings.each do |my_booking| %>
-          <%= my_booking.start_date %> to <%= my_booking.end_date %>
-            <%= my_booking.president.name %>
-            <% end %>
+       <%= my_booking.start_date %> to <%= my_booking.end_date %> <br>
+        <%= my_booking.president.name %> <br>
+        status: <%= my_booking.status %> <br>
+        <% end %>
         </li>
       </ul>
     </div>
