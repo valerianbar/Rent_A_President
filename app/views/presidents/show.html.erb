@@ -5,9 +5,8 @@
       <p><%= @president.description %></p>
 
       <!-- Liste des services -->
-      <h4>Price :</h4>
-      <p>10$ per day</p>
-
+      <h4></h4>
+      <p><strong>10$ per day - Christmas Sales</strong></p>
 
       <h4>Reviews</h4>
       <% if @president.reviews.empty? %>
@@ -24,10 +23,8 @@
         <hr>
       <% end %>
 
-
-
       <!-- Calendrier HTML5 -->
-      <h4>Availabilities :</h4>
+      <h4></h4>
       <%# faire un formulaire pour le booking avec simple form @booking qui pointera vers create booking controller %>
 
       <%= simple_form_for(@booking) do |f| %>
@@ -36,7 +33,7 @@
               as: :string,
               input_html: { data: { controller: "datepicker" } } %>
         <%= f.input :president_id, input_html: {value: params[:id]}, wrapper_html: {class: "d-none"} %>
-        <%= f.submit "Book this president", class: "btn btn-primary mx-auto", id: "book-button" %>
+        <%= f.submit "Book this president", class: "btn btn-primary mx-auto ", id: "book-button" %>
         <%= link_to "Back to the list", presidents_path, class: "btn btn-secondary mx-auto" %>
       <% end %>
     </div>
@@ -72,9 +69,10 @@
       <div class="bg-white rounded p-3 mb-4">
         <h5>Add your review</h5>
         <%= simple_form_for [@president, @review] do |f| %>
-          <%= f.input :comment, placeholder: "Add your review here..." %>
+          <%= f.input :comment, placeholder: "Say something about this president..." %>
           <%= f.input :rating, as: :select, collection: (1..5), required: true, label: false, input_html: { data: { controller: "star-rating" } } %>
-          <%= f.submit class: "btn btn-flat mt-2 d-block mx-auto" %>
+          <%= f.submit class: "btn btn-primary mx-auto" %>
+        <%= link_to "Edit review", presidents_path, class: "btn btn-secondary mx-auto" %>
         <% end %>
       </div>
     </div>

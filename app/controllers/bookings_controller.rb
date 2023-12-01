@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.president = President.find(params[:booking][:president_id])
     @booking.status = "pending"
     if @booking.save
-      redirect_to president_path(@booking.president), notice: 'Booking was successfully created.'
+      redirect_to president_path(@booking.president), notice: 'Booking send ! Wait for reply 🕒'
     else
       render 'presidents/show', status: :unprocessable_entity
     end
