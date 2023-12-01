@@ -8,6 +8,24 @@
       <h4>Price :</h4>
       <p>10$ per day</p>
 
+
+      <h4>Reviews</h4>
+      <% if @president.reviews.empty? %>
+        <small><em class="text-muted">Be the first one to review this president</em></small>
+      <% end %>
+      <% @president.reviews.each do |review| %>
+        <div>
+          <% review.rating.times do %>
+            <i class="fas fa-star star-yellow"></i>
+          <% end %>
+          <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
+          <p class="mb-0"><%= review.comment %></p>
+        </div>
+        <hr>
+      <% end %>
+
+
+
       <!-- Calendrier HTML5 -->
       <h4>Availabilities :</h4>
       <%# faire un formulaire pour le booking avec simple form @booking qui pointera vers create booking controller %>
