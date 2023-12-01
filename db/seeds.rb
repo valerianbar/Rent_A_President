@@ -188,7 +188,7 @@ president12.save!
 
 
 booking = Booking.new(
-  president: president0,
+  president: president10,
   user: maelie,
   start_date: "Thu, 30 Nov 2023",
   end_date: "Tue, 12 Dec 2023",
