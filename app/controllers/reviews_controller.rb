@@ -14,7 +14,7 @@ def create
       marker_html: render_to_string(partial: "presidents/marker")
   }]
   if @review.save
-    redirect_to president_path(@president), notice: 'Review was successfully created.'
+    redirect_to president_path(@president), notice: 'Review was successfully created  🎉 '
   else
     render 'presidents/show', status: :unprocessable_entity
   end

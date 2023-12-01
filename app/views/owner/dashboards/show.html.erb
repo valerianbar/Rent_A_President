@@ -1,33 +1,40 @@
 <div class="container">
-  <div class="d-flex justify-content-around">
-    <div class="row col-md-6">
-      <h2>My Bookings</h2>
-      <ul>
-        <% @my_bookings.each do |my_booking| %>
-        <li> <%= my_booking.start_date %> to <%= my_booking.end_date %></li>
-        <li> <%= my_booking.president.name %></li>
-        <% end %>
-      </ul>
+    <div class="card" style="width: 18rem;">
+      <div class="card-header">
+        <h2>My Bookings</h2>
+      </div>
+        <ul class="list-group list-group-flush">
+          <% @my_bookings.each do |my_booking| %>
+            <li class="list-group-item">
+              <b><%= my_booking.president.name %></b> <br>
+              <%= my_booking.start_date %> to <%= my_booking.end_date %> <br>
+              <b>Status:</b> <%= my_booking.status %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
 
-    <div class="row col-md-6">
-      <h2>My President's Bookings</h2>
-      <ul>
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      <h2>My Presidents's bookings</h2>
+    </div>
+      <ul class="list-group list-group-flush">
         <% @bookings_of_my_presidents.each do |bookings_of_my_president| %>
-          <h5><b><%= bookings_of_my_president.president.name %></b></h5>
-          <li><b>From</b> <%= bookings_of_my_president.start_date %> <b>to</b> <%= bookings_of_my_president.end_date %></li>
-          <li><b>Booked by:</b> <%= bookings_of_my_president.user.first_name %> <%= bookings_of_my_president.user.last_name %></li>
-          <li> <b>Contact:</b> <%= bookings_of_my_president.user.email %></li>
-          <% if bookings_of_my_president.status == "pending" %>
-          <%= link_to "Accept", accept_owner_booking_path(bookings_of_my_president), data:{turbo_method: :patch}, class: "btn btn-info" %>
-          <%= link_to "Decline", decline_owner_booking_path(bookings_of_my_president), data:{turbo_method: :patch}, class: "btn btn-danger" %>
-          <% else %>
-          <%= bookings_of_my_president.status %>
-          <% end %>
+          <li class="list-group-item"><h5><b><%= bookings_of_my_president.president.name %></b></h5>
+          <b>From</b> <%= bookings_of_my_president.start_date %> <b>to</b> <%= bookings_of_my_president.end_date %> <br>
+          <b>Booked by:</b> <%= bookings_of_my_president.user.first_name %> <%= bookings_of_my_president.user.last_name %> <br>
+          <b>Contact:</b> <%= bookings_of_my_president.user.email %> <br>
+            <% if bookings_of_my_president.status == "pending" %>
+            <%= link_to "Accept", accept_owner_booking_path(bookings_of_my_president), data:{turbo_method: :patch}, class: "btn btn-info" %>
+            <%= link_to "Decline", decline_owner_booking_path(bookings_of_my_president), data:{turbo_method: :patch}, class: "btn btn-danger" %>
+            <% else %>
+            <%= bookings_of_my_president.status %>
+            <% end %>
         <% end %>
       </ul>
-    </div>
   </div>
+
   <div class="container-fluid">
   <div class="row ">
 
@@ -49,40 +56,3 @@
     </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<
