@@ -1,6 +1,6 @@
 /* CSS pour les cartes */
 .card-trip-home {
-  margin: 0 30px; /* Ajout de marge 30 à droite et à gauche pour la page d'accueil */
+  margin: 0 35px; /* Ajout de marge 30 à droite et à gauche pour la page d'accueil */
   font-size: 18px;
 }
 
@@ -21,9 +21,9 @@
   object-fit: fill;
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1780px) {
   .card-trip-home > img {
-    height: 350px;
+    height: 380px;
     width: 100%;
     object-fit: fill;
   }
@@ -70,4 +70,8 @@ a {
     margin-right: auto;
     margin-left: auto;
   }
+}
+
+.star-yellow {
+  color: rgb(255, 182, 87)
 }
