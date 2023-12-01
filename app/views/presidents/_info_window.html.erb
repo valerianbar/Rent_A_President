@@ -1,7 +1,9 @@
 <% president.photos.each do |photo| %>
   <div class="border-primary rounded">
-    <%= cl_image_tag photo.key, class: "img-fluid", width: 100, height: 100, crop: :fill %>
+    <%= link_to president_path(president), class: "img-link" do %>
+      <%= cl_image_tag photo.key, class: "img-fluid", width: 100, height: 100, crop: :fill %>
+    <% end %>
   </div>
-<% end  %>
-<h4><%= president.name %></h4>
-<h5><%= president.address %></h5>
+<% end %>
+<h4><%= link_to president.name, president_path(president) %></h4>
+<h5><%= link_to president.address, president_path(president) %></h5>
