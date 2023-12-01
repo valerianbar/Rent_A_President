@@ -18,7 +18,7 @@
       <div class="container">
         <div class="row">
           <% @presidents.each do |president| %>
-            <div class="col-lg-4 col-md-4 col-12 mb-6"> <!-- Réduisez la largeur des cartes ici -->
+            <div class="col-lg-4 col-md-4 col-12 mb-5"> <!-- Réduisez la largeur des cartes ici -->
               <a href="<%= president_path(president) %>">
                 <div class="card-trip card-trip-list custom-link">
                   <% president.photos.each do |photo| %>
@@ -29,7 +29,7 @@
                       <%= president.name %>
                       <p><%= president.description.split('.').first + '.' %></p>
                     </div>
-                    <h2 class="card-trip-pricing">$10<br> /day</h2>
+                    <h2 class="card-trip-pricing">$10 <br>/day</h2>
                   </div>
                 </div>
               </a>
