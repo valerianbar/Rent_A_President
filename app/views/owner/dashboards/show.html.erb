@@ -18,8 +18,14 @@
         <% @bookings_of_my_presidents.each do |bookings_of_my_president| %>
           <h5><b><%= bookings_of_my_president.president.name %></b></h5>
           <li><b>From</b> <%= bookings_of_my_president.start_date %> <b>to</b> <%= bookings_of_my_president.end_date %></li>
-          <li><b>Booked by:</b> <%= bookings_of_my_president.user.first_name %><%= bookings_of_my_president.user.last_name %></li>
+          <li><b>Booked by:</b> <%= bookings_of_my_president.user.first_name %> <%= bookings_of_my_president.user.last_name %></li>
           <li> <b>Contact:</b> <%= bookings_of_my_president.user.email %></li>
+          <% if bookings_of_my_president.status == "pending" %>
+          <%= link_to "Accept", accept_owner_booking_path(bookings_of_my_president), data:{turbo_method: :patch}, class: "btn btn-info" %>
+          <%= link_to "Decline", decline_owner_booking_path(bookings_of_my_president), data:{turbo_method: :patch}, class: "btn btn-info" %>
+          <% else %>
+          <%= bookings_of_my_president.status %>
+          <% end %>
         <% end %>
       </ul>
     </div>

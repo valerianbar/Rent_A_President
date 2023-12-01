@@ -12,6 +12,18 @@ class Owner::PresidentsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def book_president
+    @president = President.find(params[:id])
+    @booking = Booking.new(president: @president, user: current_user)
+
+    if @booking.save
+      @president.update(status: "pending")
+      redirect_to president_path(@president), notice: "Waiting for validation. You will receive an email soon"
+    else
+      render :show
+    end
+  end
   private
 
   def president_params
