@@ -23,7 +23,7 @@
           <li> <b>Contact:</b> <%= bookings_of_my_president.user.email %></li>
           <% if bookings_of_my_president.status == "pending" %>
           <%= link_to "Accept", accept_owner_booking_path(bookings_of_my_president), data:{turbo_method: :patch}, class: "btn btn-info" %>
-          <%= link_to "Decline", decline_owner_booking_path(bookings_of_my_president), data:{turbo_method: :patch}, class: "btn btn-info" %>
+          <%= link_to "Decline", decline_owner_booking_path(bookings_of_my_president), data:{turbo_method: :patch}, class: "btn btn-danger" %>
           <% else %>
           <%= bookings_of_my_president.status %>
           <% end %>
@@ -48,4 +48,3 @@
       </li>
     </ul>
   </div >
-
