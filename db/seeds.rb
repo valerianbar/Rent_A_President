@@ -70,7 +70,7 @@ president1 = President.new(
   address: "Berlin"
 )
 file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701425002/merkel_ivmlv4.webp")
-president.photos.attach([{io: file, filename: "merkel.jpg", content_type: "image/jpg"}])
+president1.photos.attach([{io: file, filename: "merkel.jpg", content_type: "image/jpg"}])
 president1.save!
 
 president2 = President.new(
@@ -79,7 +79,7 @@ president2 = President.new(
   user: florent,
   address: "Mexico"
 )
-file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701425002/merkel_ivmlv4.webp")
+file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701427910/melenchon_gb3weq.webp")
 president2.photos.attach([{io: file, filename: "melenchon.jpg", content_type: "image/jpg"}])
 president2.save!
 
@@ -101,8 +101,8 @@ president4 = President.new(
   address: "Mexico"
 )
 file = URI.open("https://res.cloudinary.com/dpuyx30vh/image/upload/v1701424953/biden_lw8evt.webp")
-president.photos.attach([{io: file, filename: "biden.jpg", content_type: "image/jpg"}])
-president2.save!
+president4.photos.attach([{io: file, filename: "biden.jpg", content_type: "image/jpg"}])
+president4.save!
 
 
 president5 = President.new(
