@@ -1,3 +1,7 @@
+<div class="header-bar">
+  <p><span class="santa-emoji">🎅</span> CHRISTMAS SALES - ALL OUR PRESIDENTS FOR $10 <span class="santa-emoji">🎅</span></p>
+</div>
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon px-2">
   <div class="container-fluid">
   <%= link_to root_path do %>
@@ -21,11 +25,11 @@
         <%= link_to "Dashboard", owner_dashboards_path, class: "nav-link" %>
       </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://res.cloudinary.com/dpuyx30vh/image/upload/v1701269929/photo_cbbfrn.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://res.cloudinary.com/dpuyx30vh/image/upload/v1701430488/T02NE0241-U016L9SL4NP-e8b125078a73-512_pk8ztn.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My account", "#", class: "dropdown-item" %>
               <%= link_to "Notifications", "#", class: "dropdown-item" %>
-              <%= link_to "Sign out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Sign out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
         <% else %>
